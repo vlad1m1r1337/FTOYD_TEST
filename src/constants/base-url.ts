@@ -1,0 +1,1 @@
+export const baseUrl = 'https://app.ftoyd.com/fronttemp-service';
