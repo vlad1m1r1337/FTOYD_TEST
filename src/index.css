@@ -6,11 +6,43 @@ html,
 body,
 :root {
     height: 100%;
-    background-color: #0B0E12; /* без кавычек */
+    background-color: #06080C;
 }
 
 @layer base {
     :root {
         --background: '0B0E12'
     }
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    src: url("/public/fonts/Inter-SemiBold.ttf");
+}
+@font-face {
+    font-family: "TacticSans";
+    font-weight: 400;
+    src: url("public/fonts/TacticSans-BlkIt.ttf");
+}
+
+.rotate-enter {
+    transform: rotate(0);
+}
+.rotate-enter-active {
+    transform: rotate(180deg);
+    transition: transform 1s;
+}
+.rotate-enter-done {
+    transform: rotate(180deg);
+}
+.rotate-exit {
+    transform: rotate(180deg);
+}
+.rotate-exit-active {
+    transform: rotate(0);
+    transition: transform 1s;
+}
+.rotate-exit-done {
+    transform: rotate(0);
 }
