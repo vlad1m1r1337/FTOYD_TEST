@@ -43,15 +43,3 @@ export const Matches: FC<{ data: Data }> = ({ data }) => {
         </div>
     );
 };
-
-// <ScoreStatus homeTeam={item.homeTeam} className="col-start-1 gap-3.5"/>
-// <div className="flex col-start-3 col-end-5 justify-center content-center justify-self-center place-self-center items-center flex-col gap-1">
-//     <p className="text-white font-inter_semibold text-xl">
-//         {item.homeScore} : {item.awayScore}
-//     </p>
-//     <MatchStatus status={item.status} />
-// </div>
-// <ScoreStatus homeTeam={item.awayTeam} className="flex col-end-7 gap-3.5 justify-end">
-//     <img className="w-12 h-12" src="/public/icons/team_logo.svg" alt="team_logo" />
-//     <PopupArrow togglePopup={() => togglePopup(index)} popup={popups[index]} />
-// </ScoreStatus>
