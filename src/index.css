@@ -30,14 +30,14 @@ body,
     transform: rotate(0);
 }
 .rotate-enter-active {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
     transition: transform 1s;
 }
 .rotate-enter-done {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
 }
 .rotate-exit {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
 }
 .rotate-exit-active {
     transform: rotate(0);

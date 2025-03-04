@@ -3,7 +3,7 @@ type Player = {
     username: string;
 };
 
-type Team = {
+export type Team = {
     name: string;
     place: number;
     players: Player[];

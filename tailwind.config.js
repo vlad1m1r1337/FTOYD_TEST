@@ -9,7 +9,12 @@ export default {
         custom_red: '#EB0237',
         custom_red_hover: '#A01131',
         custom_red_active: '#701328',
-        item_color: '#0B0E12'
+        item_color: '#0B0E12',
+        inner_item_color: '#101318',
+        white_text: '#FAFAFA'
+      },
+      screens: {
+        'large_screen': '1840px',
       },
       fontFamily: {
         inter_semibold: ['Inter', 'sans-serif'],
@@ -17,7 +22,6 @@ export default {
       },
       animation: {
         rotate: 'rotate 2s linear infinite',
-        turn: 'rotate 2s linear 2s'
       },
       keyframes: {
         fadeIn: {

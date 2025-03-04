@@ -1,7 +1,6 @@
-import { useQuery } from '@tanstack/react-query';
-import axios, {AxiosResponse} from 'axios';
-import {baseUrl} from "../constants/base-url.ts";
-import {Data} from "../types/api.ts";
+import axios, { AxiosResponse } from 'axios';
+import { baseUrl } from '../constants/base-url.ts';
+import { Data } from '../types/api.ts';
 
 export const getMatches = async (): Promise<Data> => {
     const res: AxiosResponse<Data> = await axios.get(`${baseUrl}/fronttemp/`);
@@ -11,9 +10,20 @@ export const getMatches = async (): Promise<Data> => {
     return res.data;
 };
 
-export const useMatches = () => {
-    return useQuery({
-        queryKey: ['matches'],
-        queryFn: getMatches,
-    });
+type RefreshMatchesProps = {
+    setIsLoading: (value: boolean) => void;
+    setData: (value: Data) => void;
+    setIsError: (value: boolean) => void;
+}
+
+export const refreshMatches = async ({setIsLoading, setData, setIsError}: RefreshMatchesProps) => {
+    setIsLoading(true);
+    try {
+        const res = await getMatches();
+        setData(res);
+    } catch {
+        setIsError(true);
+    } finally {
+        setIsLoading(false);
+    }
 };

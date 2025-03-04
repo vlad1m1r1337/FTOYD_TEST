@@ -49,3 +49,5 @@ export default tseslint.config({
 })
 ```
 # FTOYD_TEST
+
+Комманды для запуска проекта в dev mode: `npm i && npm run dev`
